@@ -1,0 +1,121 @@
+[gd_scene load_steps=16 format=3 uid="uid://djf71ehiy03sf"]
+
+[ext_resource type="Texture2D" uid="uid://hja5bfpux6yd" path="res://addons/quick_toolbar/Textures/sun.png" id="1_eq70l"]
+[ext_resource type="Script" path="res://addons/quick_toolbar/ToolbarButton.cs" id="2_je63m"]
+[ext_resource type="Texture2D" uid="uid://bmdbtr0jtwqxi" path="res://addons/quick_toolbar/Textures/omnilight.png" id="3_p2lhs"]
+[ext_resource type="Texture2D" uid="uid://b2v0xdndlxpav" path="res://addons/quick_toolbar/Textures/spot.png" id="4_8j27e"]
+[ext_resource type="Texture2D" uid="uid://djls7uidu2l55" path="res://addons/quick_toolbar/Textures/camera.png" id="5_3i3il"]
+[ext_resource type="Texture2D" uid="uid://csvc1aphk15eb" path="res://addons/quick_toolbar/Textures/env.png" id="6_oiial"]
+[ext_resource type="Texture2D" uid="uid://bonlo4emxq4a7" path="res://addons/quick_toolbar/Textures/time.png" id="7_swbhn"]
+[ext_resource type="Texture2D" uid="uid://b0wt6kbn60rbc" path="res://addons/quick_toolbar/Textures/characterbody.png" id="8_v673q"]
+[ext_resource type="Texture2D" uid="uid://bsgxuoj26hipy" path="res://addons/quick_toolbar/Textures/rigidbody.png" id="9_w3v6v"]
+[ext_resource type="Texture2D" uid="uid://bjwol7rq7atf3" path="res://addons/quick_toolbar/Textures/staticbody.png" id="10_hhuq3"]
+[ext_resource type="Texture2D" uid="uid://cw7ia15ontca7" path="res://addons/quick_toolbar/Textures/mesh.png" id="11_0y7uc"]
+[ext_resource type="Texture2D" uid="uid://d3dy4imy75q7g" path="res://addons/quick_toolbar/Textures/area.png" id="12_tmy8r"]
+[ext_resource type="Texture2D" uid="uid://c8tclwqnnmtig" path="res://addons/quick_toolbar/Textures/audio.png" id="13_tpoa5"]
+[ext_resource type="Texture2D" uid="uid://cx0eiin2dr1ta" path="res://addons/quick_toolbar/Textures/collision.png" id="14_cdgfv"]
+[ext_resource type="Texture2D" uid="uid://dnn81hxulv52n" path="res://addons/quick_toolbar/Textures/node.png" id="15_u41xp"]
+
+[node name="Toolbar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 286.0
+grow_vertical = 2
+
+[node name="HFlowContainer" type="HFlowContainer" parent="ScrollContainer"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+
+[node name="Sun" type="TextureButton" parent="ScrollContainer/HFlowContainer"]
+layout_mode = 2
+tooltip_text = "Directional Light 3D"
+texture_normal = ExtResource("1_eq70l")
+script = ExtResource("2_je63m")
+
+[node name="Omnilight" type="TextureButton" parent="ScrollContainer/HFlowContainer"]
+layout_mode = 2
+tooltip_text = "Omnilight 3D"
+texture_normal = ExtResource("3_p2lhs")
+script = ExtResource("2_je63m")
+
+[node name="Spot" type="TextureButton" parent="ScrollContainer/HFlowContainer"]
+layout_mode = 2
+tooltip_text = "Spotlight 3D"
+texture_normal = ExtResource("4_8j27e")
+script = ExtResource("2_je63m")
+
+[node name="Cam" type="TextureButton" parent="ScrollContainer/HFlowContainer"]
+layout_mode = 2
+tooltip_text = "Camera 3D"
+texture_normal = ExtResource("5_3i3il")
+script = ExtResource("2_je63m")
+
+[node name="Env" type="TextureButton" parent="ScrollContainer/HFlowContainer"]
+layout_mode = 2
+tooltip_text = "Environment"
+texture_normal = ExtResource("6_oiial")
+script = ExtResource("2_je63m")
+
+[node name="Tim" type="TextureButton" parent="ScrollContainer/HFlowContainer"]
+layout_mode = 2
+tooltip_text = "Timer"
+texture_normal = ExtResource("7_swbhn")
+script = ExtResource("2_je63m")
+
+[node name="Char" type="TextureButton" parent="ScrollContainer/HFlowContainer"]
+layout_mode = 2
+tooltip_text = "Characterbody 3D"
+texture_normal = ExtResource("8_v673q")
+script = ExtResource("2_je63m")
+
+[node name="Rigid" type="TextureButton" parent="ScrollContainer/HFlowContainer"]
+layout_mode = 2
+tooltip_text = "Rigidbody 3D"
+texture_normal = ExtResource("9_w3v6v")
+script = ExtResource("2_je63m")
+
+[node name="Static" type="TextureButton" parent="ScrollContainer/HFlowContainer"]
+layout_mode = 2
+tooltip_text = "Staticbody 3D"
+texture_normal = ExtResource("10_hhuq3")
+script = ExtResource("2_je63m")
+
+[node name="Mes" type="TextureButton" parent="ScrollContainer/HFlowContainer"]
+layout_mode = 2
+tooltip_text = "MeshInstance 3D"
+texture_normal = ExtResource("11_0y7uc")
+script = ExtResource("2_je63m")
+
+[node name="Area" type="TextureButton" parent="ScrollContainer/HFlowContainer"]
+layout_mode = 2
+tooltip_text = "Area 3D"
+texture_normal = ExtResource("12_tmy8r")
+script = ExtResource("2_je63m")
+
+[node name="Audio" type="TextureButton" parent="ScrollContainer/HFlowContainer"]
+layout_mode = 2
+tooltip_text = "Audio stream player"
+texture_normal = ExtResource("13_tpoa5")
+script = ExtResource("2_je63m")
+
+[node name="Collision" type="TextureButton" parent="ScrollContainer/HFlowContainer"]
+layout_mode = 2
+tooltip_text = "Collision Shape 3D
+"
+texture_normal = ExtResource("14_cdgfv")
+script = ExtResource("2_je63m")
+
+[node name="Node" type="TextureButton" parent="ScrollContainer/HFlowContainer"]
+layout_mode = 2
+tooltip_text = "Node 3D"
+texture_normal = ExtResource("15_u41xp")
+script = ExtResource("2_je63m")
